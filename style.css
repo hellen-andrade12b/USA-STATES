@@ -58,24 +58,28 @@ p{
     border-radius: 0.5rem;
     align-items: center;
 }
-.bandeira{
-    
-    width:3px;
-    padding: 2rem;
-    border-radius: 2rem;
-    
-    margin: 0;
+.bandeira {
+    width: 100%; 
+    max-width: 1200px; /* Define um limite máximo para a largura */
+    margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    padding: 1rem; /* Adiciona espaçamento interno */
+    border-radius: 1rem; /* Bordas arredondadas */
+    position: relative; /* Permite o posicionamento interno do .usa */
+    overflow: hidden; /* Garante que o conteúdo fique dentro dos limites da bandeira */
 }
-.usa{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    position: absolute;
+
+.usa {
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço da .bandeira */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    position: absolute; /* Fica posicionado dentro de .bandeira */
     top: 0;
     left: 0;
-    z-index: 1;
-    
-    
+    position: absolute;
+    top: 20px; /* Ajusta a posição vertical */
+    left: 20px; /* Ajusta a posição horizontal */
+    z-index: 2; /* Acima da camada azul */
+    width: 100px; /* Tamanho da logo */
 }
 .menu{
     background-color: #1557af;
@@ -86,7 +90,14 @@ p{
 .um{
     position: relative;
     width: 100%;
-    height: 120px; 
+    height: 120px; /* Defina a altura desejada */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 120px; /* Altura desejada */
+    overflow: hidden;
+    background: url('assets/Capturar.PNG') center/cover no-repeat; /* Imagem de fundo */
+    
 }
 body{
     margin: 0;

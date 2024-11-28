@@ -4,7 +4,7 @@ ul , li {
 }
 *{
     margin: 0;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     font-family: "DMSerifDisplay",Verdana, Geneva, Tahoma, sans-serif;
     color: #c2dcff;
@@ -58,24 +58,47 @@ p{
     border-radius: 0.5rem;
     align-items: center;
 }
-.bandeira{
-    
-    width:3px;
-    padding: 2rem;
-    border-radius: 2rem;
-    
-    margin: 0;
+.imagem{
+    flex: 1; /* Define o espaço que as imagens ocupam */
+    display: flex;
+    flex-direction: column; /* Alinha as imagens verticalmente */
+    gap: 10px; /* Espaçamento entre as imagens */
 }
-.usa{
-    width:5rem;
-    width: 100%;
-    height: 100%;
-    
-    
+
+.usa {
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço da .bandeira */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    position: absolute; /* Fica posicionado dentro de .bandeira */
+    top: 0;
+    left: 0;
 }
 .menu{
     background-color: #1557af;
     width: 100%;
     display: flex;
+    display: flex; /* Ativa o flexbox */
+    flex-direction: row; /* Organiza os elementos em linha (lado a lado) */
+    align-items: flex-start; /* Alinha os elementos ao topo */
+    gap: 20px; /* Espaço entre as imagens e o texto */
+    padding: 20px;
     
 }
+.um{
+    position: relative;
+    width: 100%;
+    height: 120px; /* Defina a altura desejada */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 120px; /* Altura desejada */
+    overflow: hidden;
+    background: url('assets/Capturar.PNG') center/cover no-repeat; /* Imagem de fundo */
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
